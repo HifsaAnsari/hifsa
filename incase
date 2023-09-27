@@ -1,0 +1,18 @@
+@media (min-width: 992px)
+.header, .header.nav-active {
+    background-color: transparent;
+    box-shadow: none;
+    height: unset;
+    padding-block: 30px;
+}
+.header {
+    position: fixed;
+    padding-block: 15px;
+    width: 100%;
+    background-color: var(--space-cadet);
+    height: 65px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: 0.25s var(--cubic-out);
+    z-index: 4;
+}

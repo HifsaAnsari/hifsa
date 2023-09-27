@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bootstrap 5 - Transparent Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <style>
+    .banner-image {
+      background-image: url('img/banner-img.jpg');
+      background-size: cover;
+    }
+
+    @media(max-width: 991px) {
+      .sidebar {
+        background-color: rgba(0, 0, 0, 0.094);
+        backdrop-filter: blur(10px);
+        color: aliceblue;
+      }
+    }
+
+    .bg-overlay {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .opacity-2 {
+      opacity: 0.2 !important;
+    }
+
+    .bg-dark {
+      --bs-bg-opacity: 1;
+      background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+    }
+
+    @media (min-width: 576px) {
+      .py-sm-9 {
+        padding-top: 11rem !important;
+        padding-bottom: 11rem !important;
+      }
+
+      .py-8 {
+        padding-top: 8rem !important;
+        padding-bottom: 8rem !important;
+      }
+    }
+
+
+
+
+
+
+
+
+
+    /*new  */
+    .hero {
+      background-image: url(./img/banner-img.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding-block: 100px var(--section-padding);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+
+    @media (min-width: 992px) {
+      /* .hero .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        max-width: 1050px;
+        margin-inline: auto;
+      } */
+      .hero-content {
+    text-align: left;
+}
+.hero-title {
+    --fs-5: 2.2rem;
+    margin-block-end: 25px;
+}
+.hero-text {
+    margin-block-end: 25px;
+    font-size: var(--fs-5);
+}
+.btn-group {
+    justify-content: flex-start;
+}
+    }
+
+    .container {
+      padding-inline: 20px;
+    }
+    .hero-title {
+    font-family: var(--ff-barlow);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-600);
+    line-height: 1.3;
+    margin-block-end: 14px;
+}
+
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.hero-text {
+    margin-block-end: 25px;
+}
+  </style>
+</head>
+
+<body>
+  <!-- Navbar  -->
+  <header class="header">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-dark  p-md-3 fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Offcanvas navbar</a>
+          <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas-end offcanvas sidebar" tabindex="-1" id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header text-white border-bottom">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+              <button type="button" class="btn-close btn-close-white shadow-none border-0" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column flex-lg-row mx-0 p-0 p-lg-0">
+              <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3">
+                <li class="nav-item mx-2">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link active" aria-current="page" href="#about">About</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a class="nav-link active" aria-current="page" href="#Service">Service</a>
+                </li>
+              </ul>
+              <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+                <a href="#" class="text-white text-decoration-none px-3 py-2">Login</a>
+                <a href="#" class="text-white text-decoration-none px-3 py-2 round-4 bg-primary">SignUp</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner Image  -->
+
+
+  <!-- <div class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center">
+    <div class="content text-center">
+      <h1 class="text-white">WEB ZONE</h1>
+    </div>
+  </div> -->
+
+  <!-- <h1> or</h1> -->
+
+  <!-- <section class="position-relative py-8 py-sm-9" style="background-image:url(./img/banner-img.jpg); background-position: center left; background-size: cover;">
+      <div class="bg-overlay bg-dark opacity-2"></div>
+      <div class="container z-index-9 position-relative">
+        <div class="row">
+          <div class="col-xl-8 m-auto text-center py-xl-8">
+            <h1 class="display-4 text-white mb-3">A World Of Luxury Awaits You</h1>
+            <h5 class="text-white mb-3">Discover a New Look of Luxury Resorts.</h5>
+            <a href="#" class="btn btn-lg btn-dark mb-0">Discover More</a>
+          </div>
+        </div> 
+      </div>
+    </section> -->
+
+  <main>
+    <article>
+      <section class="hero" id="home">
+        <div class="container">
+          <div class="hero-content">
+
+            <h2 class="hero-title">
+              <span>Hello I'm</span>
+              <strong>Ethan Ward</strong> Web Developer from New York
+            </h2>
+
+            <p class="hero-text">
+              Adipisicing elit. Neque nulla voluptatum eos repellat deserunt nesciunt tempore porro totam.
+            </p>
+
+            <div class="btn-group">
+              <a href="#contact" class="btn btn-primary blue">Get a Quote</a>
+
+              <a href="#about" class="btn">About Me</a>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+
+
+
+
+
+
+  <!-- <h1> or</h1> -->
+  <!-- <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./img/top-img 1.png" style="height: 700px;" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/Banner-1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/banner-img.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div> -->
+  <!-- Main Content Area -->
+  <div class="container my-5 d-grid gap-5">
+    <div class="p-5 border">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+        natus iusto fugit id saepe neque rerum magni laudantium accusantium
+        dolorem numquam quasi.
+      </p>
+    </div>
+    <div class="p-5 border">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+        natus iusto fugit id saepe neque rerum magni laudantium accusantium
+        dolorem numquam quasi.
+      </p>
+    </div>
+    <div class="p-5 border">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+        natus iusto fugit id saepe neque rerum magni laudantium accusantium
+        dolorem numquam quasi.
+      </p>
+    </div>
+    <div class="p-5 border">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+        natus iusto fugit id saepe neque rerum magni laudantium accusantium
+        dolorem numquam quasi.
+      </p>
+    </div>
+    <div class="p-5 border">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Necessitatibus veniam ipsa earum quibusdam, atque ipsum error maiores
+        natus iusto fugit id saepe neque rerum magni laudantium accusantium
+        dolorem numquam quasi. df
+      </p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    var nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', function () {
+      if (window.pageYOffset > 100) {
+        nav.classList.add('bg-dark', 'shadow');
+      } else {
+        nav.classList.remove('bg-dark', 'shadow');
+      }
+    });
+  </script>
+</body>
+
+</html>
